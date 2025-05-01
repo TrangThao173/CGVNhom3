@@ -1,0 +1,1013 @@
+<!DOCTYPE HTML>
+<html lang="zxx">
+<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CGV</title>
+		<link rel="icon" type="image/png" href="assets/img/logo.png" />
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="assets/css/slicknav.min.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="assets/css/icofont.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="all" />
+		<style>
+		#loginModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex; /* Thêm display: flex để căn giữa */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+#loginModal .modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  max-width: 500px;
+  width: 90%;
+  box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
+}
+
+#loginModal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+		</style>
+	</head>
+	<body>
+	    <div id="preloader"></div>
+		<header class="header">
+			<div class="container">
+				<div class="header-area">
+					<div class="logo">
+						<a href="index.html"><img src="assets/img/logo.png" alt="logo" /></a>
+					</div>
+					<div class="header-right">
+						<form action="#">
+							<select>
+								<option value="Phim Đang Chiếu">Phim Đang Chiếu</option>
+								<option value="Phim Sắp Chiếu">Phim Sắp Chiếu</option>
+								<option value="Phim Đặc Biệt">Phim Đặc Biệt</option>
+							</select>
+							<input type="text"/>
+							<button><i class="icofont icofont-search"></i></button>
+						</form>
+						<ul>
+							<li><a href="#">Xin chào! User</a></li>
+							<li><a class="" href="index.html">Đăng Xuất</a></li>
+						</ul>
+					</div>
+					<div class="menu-area">
+						<div class="responsive-menu"></div>
+					    <div class="mainmenu">
+                            <ul id="primary-menu">
+                                <li><a class="active" href="index.html">Trang Chủ</a></li>
+								<li><a href="movies.html">Phim</a></li>											
+								<li><a href="blog.html">Tin Tức</a></li>
+								
+                            </ul>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="loginModal" class="modal">
+			  <div id="modalBody"></div>
+			</div>
+		  </div>
+		<div class="buy-ticket">
+			<div class="container">
+				<div class="buy-ticket-area">
+					<a href="#"><i class="icofont icofont-close"></i></a>
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="buy-ticket-box">
+								<h4>Buy Tickets</h4>
+								<h5>Seat</h5>
+								<h6>Screen</h6>
+								<div class="ticket-box-table">
+									<table class="ticket-table-seat">
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+									</table>
+									<table>
+										<tr>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>2</td>
+										</tr>
+										<tr>
+											<td>3</td>
+										</tr>
+										<tr>
+											<td>4</td>
+										</tr>
+										<tr>
+											<td>5</td>
+										</tr>
+									</table>
+									<table class="ticket-table-seat">
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td class="active">1</td>
+											<td class="active">1</td>
+											<td class="active">1</td>
+											<td class="active">1</td>
+											<td class="active">1</td>
+											<td class="active">1</td>
+											<td class="active">1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+									</table>
+									<table>
+										<tr>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>2</td>
+										</tr>
+										<tr>
+											<td>3</td>
+										</tr>
+										<tr>
+											<td>4</td>
+										</tr>
+										<tr>
+											<td>5</td>
+										</tr>
+									</table>
+									<table class="ticket-table-seat">
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+											<td>1</td>
+										</tr>
+									</table>
+								</div>
+								<div class="ticket-box-available">
+									<input type="checkbox" />
+									<span>Còn Trống</span>
+									<input type="checkbox" checked />
+									<span>Hết Chỗ</span>
+									<input type="checkbox" />
+									<span>Đã chọn</span>
+								</div>
+								<a href="#" class="theme-btn">Quay lại</a>
+								<a href="#" class="theme-btn" id="bookingBtn">Đặt vé</a>
+							</div>
+						</div>
+						<div class="col-lg-3 offset-lg-1">
+							<div class="buy-ticket-box mtr-30">
+								<h4>Thông tin đặt vé</h4>
+								<ul>
+									<li>
+										<p>Rạp</p>
+										<span>CGV Bình Dương</span>
+									</li>
+									<li>
+										<p>TIME</p>
+										<span>2018.07.09   20:40</span>
+									</li>
+									<li>
+										<p>Movie name</p>
+										<span>Home Alone</span>
+									</li>
+									<li>
+										<p>Số lượng</p>
+										<span>2</span>
+									</li>
+									<li>
+										<p>Giá</p>
+										<span>89$</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- header section end -->
+		<!-- hero area start -->
+		<section class="hero-area" id="home">
+			<div class="container">
+				<div class="hero-area-slider">
+					<div class="row hero-area-slide">
+						<div class="col-lg-6 col-md-5">
+							<div class="hero-area-content">
+								<img src="assets/img/slide2.jpg" alt="about" />
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-7">
+							<div class="hero-area-content pr-50">
+								<h2>Mắt biếc</h2>
+								<div class="review">
+									<div class="author-review">
+										<i class="icofont icofont-star"></i>
+										<i class="icofont icofont-star"></i>
+										<i class="icofont icofont-star"></i>
+										<i class="icofont icofont-star"></i>
+										<i class="icofont icofont-star"></i>
+									</div>
+									<h4>180k đánh giá</h4>
+								</div>
+								<p>Mắt biếc xoay quanh mối tình đơn phương của Ngạn với Hà Lan, cô bạn gái có cặp mắt hút hồn nhưng cá tính bướng bỉnh....</p>
+								<h3>Diễn viên:</h3>
+								<div class="slide-cast">
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast1.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast2.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast3.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast4.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast5.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast6.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast7.png" alt="about" />
+									</div>
+									<div class="single-slide-cast text-center">
+										5+
+									</div>
+								</div>
+								<div class="slide-trailor">
+									<h3>PLAY</h3>
+									<a class="theme-btn theme-btn2" href="movie-details1.html"><i class="icofont icofont-play"></i>Vé</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row hero-area-slide">
+						<div class="col-lg-6 col-md-5">
+							<div class="hero-area-content">
+								<img src="assets/img/slide1.jpg" alt="about" />
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-7">
+							<div class="hero-area-content pr-50">
+								<h2>Kẻ học lại</h2>
+								<div class="review">
+									<div class="author-review">
+										<i class="icofont icofont-star"></i>
+										<i class="icofont icofont-star"></i>
+										<i class="icofont icofont-star"></i>
+										<i class="icofont icofont-star"></i>
+										<i class="icofont icofont-star"></i>
+									</div>
+									<h4>180k Đánh giá</h4>
+								</div>
+								<p>Kẻ ăn hồn (tiếng Anh: The Soul Reaper) là một bộ phim điện ảnh Việt Nam thuộc thể loại kinh dị – cổ trang được chuyển thể từ tiểu thuyết cùng tên của nhà văn Thảo Trang ra mắt vào năm 2023.., còn kẻ học lại thì có thể là nhóm này</p>
+								<h3>Diễn viên:</h3>
+								<div class="slide-cast">
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast1.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast2.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast3.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast4.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast5.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast6.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast7.png" alt="about" />
+									</div>
+									<div class="single-slide-cast text-center">
+										5+
+									</div>
+								</div>
+								<div class="slide-trailor">
+									<h3>PLAY</h3>
+									<a class="theme-btn theme-btn2" href="movie-details2.html"><i class="icofont icofont-play"></i>Vé</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row hero-area-slide">
+						<div class="col-lg-6 col-md-5">
+							<div class="hero-area-content">
+								<img src="assets/img/slide3.jpg" alt="about" />
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-7">
+							<div class="hero-area-content pr-50">
+								<h2>Thám Tử Lừng Danh Conan: Ngôi Sao 5 Cánh 1 Triệu Đô</h2>
+								<div class="review">
+									<div class="author-review">
+										<i class="icofont icofont-star"></i>
+										<i class="icofont icofont-star"></i>
+										<i class="icofont icofont-star"></i>
+										<i class="icofont icofont-star"></i>
+										<i class="icofont icofont-star"></i>
+									</div>
+									<h4>180k Dánh giá</h4>
+								</div>
+								<p>Thông báo từ Kaito Kid đã được gửi tới phòng chứa đồ của Axie Zaibatsu ở Hakodate, Hokkaidō. Mục tiêu của Kid lần này...?</p>
+								<h3>Diễn viên:</h3>
+								<div class="slide-cast">
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast1.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast2.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast3.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast4.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast5.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast6.png" alt="about" />
+									</div>
+									<div class="single-slide-cast">
+										<img src="assets/img/cast/cast7.png" alt="about" />
+									</div>
+									<div class="single-slide-cast text-center">
+										5+
+									</div>
+								</div>
+								<div class="slide-trailor">
+									<h3>Play</h3>
+									<a class="theme-btn theme-btn2" href="movie-details3.html"><i class="icofont icofont-play"></i>Vé</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hero-area-thumb">
+					<div class="thumb-prev">
+						<div class="row hero-area-slide">
+							<div class="col-lg-6">
+								<div class="hero-area-content">
+									<img src="assets/img/slide3.jpg" alt="about" />
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="hero-area-content pr-50">
+									<h2>Thám Tử Lừng Danh Conan: Ngôi Sao 5 Cánh 1 Triệu Đô</h2>
+									<div class="review">
+										<div class="author-review">
+											<i class="icofont icofont-star"></i>
+											<i class="icofont icofont-star"></i>
+											<i class="icofont icofont-star"></i>
+											<i class="icofont icofont-star"></i>
+											<i class="icofont icofont-star"></i>
+										</div>
+										<h4>180k Đánh giá</h4>
+									</div>
+									<p>Thông báo từ Kaito Kid đã được gửi tới phòng chứa đồ của Axie Zaibatsu ở Hakodate, Hokkaidō. Mục tiêu của Kid lần này...?</p>
+									<h3>Diễn viên:</h3>
+									<div class="slide-cast">
+										<div class="single-slide-cast">
+											<img src="assets/img/cast/cast1.png" alt="about" />
+										</div>
+										<div class="single-slide-cast">
+											<img src="assets/img/cast/cast2.png" alt="about" />
+										</div>
+										<div class="single-slide-cast">
+											<img src="assets/img/cast/cast3.png" alt="about" />
+										</div>
+										<div class="single-slide-cast">
+											<img src="assets/img/cast/cast4.png" alt="about" />
+										</div>
+										<div class="single-slide-cast">
+											<img src="assets/img/cast/cast5.png" alt="about" />
+										</div>
+										<div class="single-slide-cast">
+											<img src="assets/img/cast/cast6.png" alt="about" />
+										</div>
+										<div class="single-slide-cast">
+											<img src="assets/img/cast/cast7.png" alt="about" />
+										</div>
+										<div class="single-slide-cast text-center">
+											5+
+										</div>
+									</div>
+									<div class="slide-trailor">
+										<h3>Play</h3>
+										<a class="theme-btn theme-btn2" href="movie-details3.html"><i class="icofont icofont-play"></i>Vé</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="thumb-next">
+						<div class="row hero-area-slide">
+							<div class="col-lg-6">
+								<div class="hero-area-content">
+									<img src="assets/img/slide1.jpg" alt="about" />
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="hero-area-content pr-50">
+									<h2>Kẻ ăn hồn</h2>
+									<div class="review">
+										<div class="author-review">
+											<i class="icofont icofont-star"></i>
+											<i class="icofont icofont-star"></i>
+											<i class="icofont icofont-star"></i>
+											<i class="icofont icofont-star"></i>
+											<i class="icofont icofont-star"></i>
+										</div>
+										<h4>180k Đánh giá</h4>
+									</div>
+									<p>Kẻ ăn hồn (tiếng Anh: The Soul Reaper) là một bộ phim điện ảnh Việt Nam thuộc thể loại kinh dị – cổ trang được chuyển thể từ tiểu thuyết cùng tên của nhà văn Thảo Trang ra mắt vào năm 2023.., còn kẻ học lại thì có thể là nhóm này</p>
+									<h3>Diễn viên:</h3>
+									<div class="slide-cast">
+										<div class="single-slide-cast">
+											<img src="assets/img/cast/cast1.png" alt="about" />
+										</div>
+										<div class="single-slide-cast">
+											<img src="assets/img/cast/cast2.png" alt="about" />
+										</div>
+										<div class="single-slide-cast">
+											<img src="assets/img/cast/cast3.png" alt="about" />
+										</div>
+										<div class="single-slide-cast">
+											<img src="assets/img/cast/cast4.png" alt="about" />
+										</div>
+										<div class="single-slide-cast">
+											<img src="assets/img/cast/cast5.png" alt="about" />
+										</div>
+										<div class="single-slide-cast">
+											<img src="assets/img/cast/cast6.png" alt="about" />
+										</div>
+										<div class="single-slide-cast">
+											<img src="assets/img/cast/cast7.png" alt="about" />
+										</div>
+										<div class="single-slide-cast text-center">
+											5+
+										</div>
+									</div>
+									<div class="slide-trailor">
+										<h3>Play</h3>
+										<a class="theme-btn theme-btn2" href="movie-details2.html"><i class="icofont icofont-play"></i>Vé</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- hero area end -->
+		<!-- portfolio section start -->
+		<section class="portfolio-area pt-60">
+			<div class="container">
+				<div class="row flexbox-center">
+					<div class="col-lg-6 text-center text-lg-left">
+						<div class="section-title">
+							<h1><i class="icofont icofont-movie"></i> Tiêu Điểm Tháng Này</h1>
+						</div>
+					</div>
+					<div class="col-lg-6 text-center text-lg-right">
+						<div class="portfolio-menu">
+							<ul>
+								<li data-filter="*" class="active">Mới Nhất</li>
+								<li data-filter=".soon">Sắp Ra Mắt</li>
+								<li data-filter=".top">Đánh Giá Cao</li>
+								<li data-filter=".released">Mới Phát Hành</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+					<div class="col-lg-9">
+						<div class="row portfolio-item">
+							<div class="col-md-4 col-sm-6 soon released">
+								<div class="single-portfolio">
+									<div class="single-portfolio-img">
+										<img src="assets/img/portfolio/portfolio1.png" alt="portfolio" />
+										<a href="https://www.youtube.com/watch?v=nmsMIDYfCow" class="popup-youtube">
+											<i class="icofont icofont-ui-play"></i>
+										</a>
+									</div>
+									<div class="portfolio-content">
+										<h2>Sát thủ vô cùng cực</h2>
+										<div class="review">
+											<div class="author-review">
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+											</div>
+											<h4>180k Đánh giá</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 top">
+								<div class="single-portfolio">
+									<div class="single-portfolio-img">
+										<img src="assets/img/portfolio/portfolio2.png" alt="portfolio" />
+										<a href="https://www.youtube.com/watch?v=EB0nnm6akjA" class="popup-youtube">
+											<i class="icofont icofont-ui-play"></i>
+										</a>
+									</div>
+									<div class="portfolio-content">
+										<h2>Quỷ nhập tràng</h2>
+										<div class="review">
+											<div class="author-review">
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+											</div>
+											<h4>180k Đánh giá</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 soon">
+								<div class="single-portfolio">
+									<div class="single-portfolio-img">
+										<img src="assets/img/portfolio/portfolio3.png" alt="portfolio" />
+										<a href="https://www.youtube.com/watch?v=iV46TJKL8cU" class="popup-youtube">
+											<i class="icofont icofont-ui-play"></i>
+										</a>
+									</div>
+									<div class="portfolio-content">
+										<h2>Snow White</h2>
+										<div class="review">
+											<div class="author-review">
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+											</div>
+											<h4>180k Đánh giá</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 top released">
+								<div class="single-portfolio">
+									<div class="single-portfolio-img">
+										<img src="assets/img/portfolio/portfolio4.png" alt="portfolio" />
+										<a href="https://www.youtube.com/watch?v=LMqJRRfmais" class="popup-youtube">
+											<i class="icofont icofont-ui-play"></i>
+										</a>
+									</div>
+									<div class="portfolio-content">
+										<h2>Cô gái năm ấy chúng ta theo đuổi</h2>
+										<div class="review">
+											<div class="author-review">
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+											</div>
+											<h4>180k Đánh giá</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 released">
+								<div class="single-portfolio">
+									<div class="single-portfolio-img">
+										<img src="assets/img/portfolio/portfolio5.png" alt="portfolio" />
+										<a href="https://www.youtube.com/watch?v=25NyBoZOoWc" class="popup-youtube">
+											<i class="icofont icofont-ui-play"></i>
+										</a>
+									</div>
+									<div class="portfolio-content">
+										<h2>Nghề siêu khó nói</h2>
+										<div class="review">
+											<div class="author-review">
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+											</div>
+											<h4>180k Đánh giá</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 soon top">
+								<div class="single-portfolio">
+									<div class="single-portfolio-img">
+										<img src="assets/img/portfolio/portfolio6.png" alt="portfolio" />
+										<a href="https://www.youtube.com/watch?v=zrGRB-dYSoo" class="popup-youtube">
+											<i class="icofont icofont-ui-play"></i>
+										</a>
+									</div>
+									<div class="portfolio-content">
+										<h2>Yêu vì Tiền Điên vì tình</h2>
+										<div class="review">
+											<div class="author-review">
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+												<i class="icofont icofont-star"></i>
+											</div>
+											<h4>180k Đánh giá</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 text-center text-lg-left">
+					    <div class="portfolio-sidebar">
+							<img src="assets/img/sidebar/sidebar1.png" alt="sidebar" />
+							<img src="assets/img/sidebar/sidebar2.png" alt="sidebar" />
+							<img src="assets/img/sidebar/sidebar3.png" alt="sidebar" />
+							<img src="assets/img/sidebar/sidebar4.png" alt="sidebar" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- portfolio section end -->
+		<!-- video section start -->
+		<section class="video ptb-90">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+					    <div class="section-title pb-20">
+							<h1><i class="icofont icofont-film"></i>Comming Soon</h1>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+                    <div class="col-md-9">
+						<div class="video-area">
+							<img src="assets/img/video/video1.png" alt="video" />
+							<a href="https://www.youtube.com/watch?v=dNf6-Qd6z0k" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+							<div class="video-text">
+								<h2>Masters Bangkok</h2>
+
+							</div>
+						</div>
+                    </div>
+                    <div class="col-md-3">
+						<div class="row">
+							<div class="col-md-12 col-sm-6">
+								<div class="video-area">
+									<img src="assets/img/video/video2.png" alt="video" />
+									<a href="https://www.youtube.com/watch?v=vSqEuc4AiIc" class="popup-youtube">
+										<i class="icofont icofont-ui-play"></i>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-12 col-sm-6">
+								<div class="video-area">
+									<img src="assets/img/video/video3.png" alt="video" />
+									<a href="https://www.youtube.com/watch?v=vTcZLGY4sTg" class="popup-youtube">
+										<i class="icofont icofont-ui-play"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+                    </div>
+				</div>
+			</div>
+		</section><!-- video section end -->
+		<!-- news section start -->
+		<section class="news">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+					    <div class="section-title pb-20">
+							<h1><i class="icofont icofont-coffee-cup"></i> Tin tức</h1>
+						</div>
+					</div>
+				</div>
+				<hr />
+			</div>
+			<div class="news-slide-area">
+				<div class="news-slider">
+					<div class="single-news">
+						<div class="news-bg-1"></div>
+						<div class="news-date">
+							<h2><span>NOV</span> 25</h2>
+							<h1>2025</h1>
+						</div>
+						<div class="news-content">
+							<h2>Phim 'Nàng Bạch Tuyết' nguy cơ lỗ nặng</h2>
+							<p>"Nàng Bạch Tuyết" nguy cơ thua lỗ khi doanh thu mở màn đạt 87 triệu USD toàn cầu, so với kinh phí 250 triệu USD...</p>
+						</div>
+						<a href="blog-details1.html">Xem thêm</a>
+					</div>
+					<div class="single-news">
+						<div class="news-bg-2"></div>
+						<div class="news-date">
+							<h2><span>NOV</span> 25</h2>
+							<h1>2025</h1>
+						</div>
+						<div class="news-content">
+							<h2>Sức hút của 'Interstellar'</h2>
+							<p>"Interstellar" của C.Nolan gây xúc động nhờ câu chuyện tình cha con lồng yếu tố giả tưởng, thu hút khán giả sau hơn 10 năm.</p>
+						</div>
+						<a href="blog-details2.html">Xem thêm</a>
+					</div>
+					<div class="single-news">
+						<div class="news-bg-3"></div>
+						<div class="news-date">
+							<h2><span>NOV</span> 25</h2>
+							<h1>2025</h1>
+						</div>
+						<div class="news-content">
+							<h2>Hoạt hình 'Doraemon' hơn nửa thế kỷ chinh phục khán giả</h2>
+							<p>Các phim về mèo máy Doraemon gây sốt với khán giả châu Á nhờ bám sát tinh thần truyện tranh, đề cao tình bạn, lòng dũng cảm.</p>
+						</div>
+						<a href="blog-details3.html">Xem thêm</a>
+					</div>
+				</div>
+				<div class="news-thumb">
+					<div class="news-next">
+						<div class="single-news">
+							<div class="news-bg-3"></div>
+							<div class="news-date">
+								<h2><span>NOV</span> 25</h2>
+								<h1>2025</h1>
+							</div>
+							<div class="news-content">
+								<h2>The Witch Queen</h2>
+								<p>Witch Queen is a tall woman with a slim build. She has pink hair, which is pulled up under her hat, and teal eyes.</p>
+							</div>
+							<a href="#">Xem thêm</a>
+						</div>
+					</div>
+					<div class="news-prev">
+						<div class="single-news">
+							<div class="news-bg-2"></div>
+							<div class="news-date">
+								<h2><span>NOV</span> 25</h2>
+								<h1>2025</h1>
+							</div>
+							<div class="news-content">
+								<h2>The Witch Queen</h2>
+								<p>Witch Queen is a tall woman with a slim build. She has pink hair, which is pulled up under her hat, and teal eyes.</p>
+							</div>
+							<a href="#">Xem thêm</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- news section end -->
+		<!-- footer section start -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-sm-6">
+						<div class="widget">
+							<img src="assets/img/logo.png" alt="giới thiệu" />
+							<p>123 Đường Lê Lợi, Quận 1, TP. Hồ Chí Minh, Việt Nam</p>
+							<h6><span>Gọi chúng tôi: </span>(+84) 123 456 7890</h6>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="widget">
+							<h4>Pháp Lý</h4>
+							<ul>
+								<li><a href="terms.html">Điều Khoản Sử Dụng</a></li>
+								<li><a href="privacy.html">Chính Sách Bảo Mật</a></li>
+								<li><a href="about.html">Về chúng tôi</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="widget">
+							<h4>Tài Khoản</h4>
+							<ul>
+								<li><a href="#">Tài Khoản Của Tôi</a></li>
+								<li><a href="#">Danh Sách Theo Dõi</a></li>
+								<li><a href="#">Bộ Sưu Tập</a></li>
+								<li><a href="#">Hướng Dẫn Sử Dụng</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="widget">
+							<h4>Bản Tin</h4>
+							<p>Đăng ký hệ thống bản tin của chúng tôi ngay bây giờ để nhận tin tức mới nhất.</p>
+							<form action="sucessdk.html">
+								<input 
+									type="email" 
+									placeholder="Nhập email của bạn.." 
+									required 
+									pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+									title="Vui lòng nhập địa chỉ email hợp lệ" 
+								/>
+								<span class="error-message" id="emailError" style="color: red; display: none;">Vui lòng nhập địa chỉ email hợp lệ</span>
+								<button type="submit">ĐĂNG KÝ NGAY</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<hr />
+			</div>
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 text-center text-lg-left">
+							<div class="copyright-content">
+							</div>
+						</div>
+						<div class="col-lg-6 text-center text-lg-right">
+							<div class="copyright-content">
+								<a href="#" class="scrollToTop">
+									Lên đầu trang<i class="icofont icofont-arrow-up"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer><!-- kết thúc phần chân trang -->
+		<!-- jquery main JS -->
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="assets/js/bootstrap.min.js"></script>
+		<!-- Slick nav JS -->
+		<script src="assets/js/jquery.slicknav.min.js"></script>
+		<!-- owl carousel JS -->
+		<script src="assets/js/owl.carousel.min.js"></script>
+		<!-- Popup JS -->
+		<script src="assets/js/jquery.magnific-popup.min.js"></script>
+		<!-- Isotope JS -->
+		<script src="assets/js/isotope.pkgd.min.js"></script>
+		<!-- main JS -->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/login.js"></script>
+	</body>
+	<script>
+		const emailInput = document.querySelector('input[type="email"]');
+		const emailError = document.getElementById('emailError');
+	
+		emailInput.addEventListener('input', function() {
+			if (emailInput.validity.valid) {
+				emailError.style.display = 'none';
+			} else {
+				emailError.style.display = 'block';
+			}
+		});
+	
+		document.querySelector('form').addEventListener('submit', function(e) {
+			if (!emailInput.validity.valid) {
+				emailError.style.display = 'block';
+				e.preventDefault();
+			}
+		});
+	</script>
+</html>

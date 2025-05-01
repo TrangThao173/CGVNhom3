@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CGV - Đặt Vé Thành Công</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slicknav.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/icofont.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="all" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Chỉ sửa phần nội dung success */
+        .success-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .page-title h1 {
+            color: #e71a0f;
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .page-title h1 img {
+            margin-right: 10px;
+            width: 40px;
+        }
+        
+        .page-title .sub-title {
+            color: #666;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        
+        .success-box {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .success-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+        
+        .success-title {
+            color: #e71a0f;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .success-message {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .ticket-code {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .ticket-number {
+            background-color: #e71a0f;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .qr-code {
+            border: 1px solid #ddd;
+            padding: 10px;
+            background: white;
+        }
+        
+        .ticket-details {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 0;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .ticket-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .ticket-details td {
+            padding: 15px 25px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .ticket-details tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .ticket-details td:first-child {
+            font-weight: 600;
+            color: #333;
+            width: 150px;
+        }
+        
+        .ticket-details td:last-child {
+            color: #e71a0f;
+            font-weight: 500;
+            text-align: right;
+        }
+        
+        .home-button {
+            background-color: #e71a0f;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        .home-button:hover {
+            background-color: #c41810;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 26, 15, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Giữ nguyên header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-area">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/img/logo.png" alt="logo" /></a>
+                </div>
+                <div class="header-right">
+                    <form action="#">
+                        <select>
+                            <option value="Phim Đang Chiếu">Phim Đang Chiếu</option>
+                            <option value="Phim Sắp Chiếu">Phim Sắp Chiếu</option>
+                            <option value="Phim Đặc Biệt">Phim Đặc Biệt</option>
+                        </select>
+                        <input type="text"/>
+                        <button><i class="icofont icofont-search"></i></button>
+                    </form>
+                    <ul>
+                        <li><a href="#">Xin chào!</a></li>
+                        <li><a class="login-popup" href="#">Đăng nhập</a></li>
+                    </ul>
+                </div>
+                <div class="menu-area">
+                    <div class="responsive-menu"></div>
+                    <div class="mainmenu">
+                        <ul id="primary-menu">
+                            <li><a class="active" href="index.html">Trang Chủ</a></li>
+                            <li><a href="movies.html">Phim</a></li>
+                            <li><a href="celebrities.html">Diễn Viên</a></li>
+                            <li><a href="top-movies.html">Phim Hàng Đầu</a></li>
+                            <li><a href="blog.html">Tin Tức</a></li>
+                            <li><a href="#">Trang Khác <i class="icofont icofont-simple-down"></i></a>
+                                <ul>
+                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                    <li><a href="movie-details.html">Movie Details</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <!-- Success Section Mới - Chỉ sửa phần này -->
+    <div class="success-content">
+        <div class="page-title">
+            <h1>
+                <img src="assets/img/ticket.webp" alt="ticket icon"> Đặt Vé Thành Công
+            </h1>
+        </div>
+
+        <div class="success-box">
+            <div class="success-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+            </div>
+            
+            <h2 class="success-title">Chúc mừng bạn!</h2>
+            
+            <p class="success-message">
+                Vé của bạn đã được đặt thành công. Thông tin chi tiết đã được gửi đến email của bạn. 
+                Vui lòng kiểm tra hộp thư để xem mã vé và thông tin suất chiếu.
+            </p>
+            
+            <div class="ticket-code">
+                <div class="ticket-number">Mã vé: CGV-BD-20250331-8752</div>
+                <div class="qr-code">
+                    <img src="assets/img/qrcode.png" alt="QR Code">
+                </div>
+            </div>
+            
+            
+            <a href="index.html" class="home-button">Quay về Trang Chủ</a>
+        </div>
+    </div>
+    <!-- End Success Section -->
+
+    <!-- Giữ nguyên footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <img src="assets/img/logo.png" alt="giới thiệu" />
+                        <p>123 Đường Lê Lợi, Quận 1, TP. Hồ Chí Minh, Việt Nam</p>
+                        <h6><span>Gọi chúng tôi: </span>(+84) 123 456 7890</h6>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <h4>Pháp Lý</h4>
+                        <ul>
+                            <li><a href="terms.html">Điều Khoản Sử Dụng</a></li>
+                            <li><a href="privacy.html">Chính Sách Bảo Mật</a></li>
+                            <li><a href="about.html">Về chúng tôi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <h4>Tài Khoản</h4>
+                        <ul>
+                            <li><a href="#">Tài Khoản Của Tôi</a></li>
+                            <li><a href="#">Danh Sách Theo Dõi</a></li>
+                            <li><a href="#">Bộ Sưu Tập</a></li>
+                            <li><a href="#">Hướng Dẫn Sử Dụng</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <h4>Bản Tin</h4>
+                        <p>Đăng ký hệ thống bản tin của chúng tôi ngay bây giờ để nhận tin tức mới nhất.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Nhập email của bạn.."/>
+                            <button>ĐĂNG KÝ NGAY</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 text-center text-lg-left">
+                        <div class="copyright-content">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-right">
+                        <div class="copyright-content">
+                            <a href="#" class="scrollToTop">
+                                Lên đầu trang<i class="icofont icofont-arrow-up"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

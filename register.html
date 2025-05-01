@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CGV - Đăng Ký</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slicknav.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/icofont.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="all" />
+    <style>
+        .register-container {
+            background-color: rgba(13, 15, 20, 0.9);
+            border-radius: 5px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .register-container h2 {
+            color: #eb315a;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .theme-btn {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #333;
+            color: #fff;
+            height: 45px;
+            padding: 10px 15px;
+        }
+
+        .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-color: #eb315a;
+            color: #fff;
+            box-shadow: none;
+        }
+
+        .register-links {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .register-links a {
+            color: #eb315a;
+            transition: all 0.3s;
+        }
+        
+        .register-links a:hover {
+            color: #fff;
+        }
+        
+        .register-page {
+            padding: 50px 0;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-row {
+            display: flex;
+            margin: 0 -10px;
+        }
+        
+        .form-row .form-group {
+            padding: 0 10px;
+            flex: 1;
+        }
+        
+        .terms-check {
+            margin-top: 15px;
+            color: #fff;
+        }
+        
+        .terms-check a {
+            color: #eb315a;
+        }
+        
+        .terms-check a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader"></div>
+    <!-- header section start -->
+    <header class="header">
+        <div class="container">
+            <div class="header-area">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/img/logo.png" alt="logo" /></a>
+                </div>
+                <div class="header-right">
+                    <form action="#">
+                        <select>
+                            <option value="Phim Đang Chiếu">Phim Đang Chiếu</option>
+                            <option value="Phim Sắp Chiếu">Phim Sắp Chiếu</option>
+                            <option value="Phim Đặc Biệt">Phim Đặc Biệt</option>
+                        </select>
+                        <input type="text"/>
+                        <button><i class="icofont icofont-search"></i></button>
+                    </form>
+                    <ul>
+                        <li><a href="login.html">Đăng nhập</a></li>
+                    </ul>
+                </div>
+                <div class="menu-area">
+                    <div class="responsive-menu"></div>
+                    <div class="mainmenu">
+                        <ul id="primary-menu">
+                            <li><a href="index.html">Trang Chủ</a></li>
+                            <li><a href="movies.html">Phim</a></li>
+
+                            <li><a href="blog.html">Tin Tức</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header><!-- header section end -->
+    
+    <!-- Register section start -->
+    <section class="register-page" style="background: url(assets/img/hero-area.png);">
+        <div class="container">
+        <br>
+        <br>
+        <br>
+            <div class="register-container">
+                <h2>Đăng Ký Tài Khoản</h2>
+                <form id="registerForm" action="successregister.html">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="firstName" placeholder="Họ" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="lastName" placeholder="Tên" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" placeholder="Tên đăng nhập" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        <span class="error-message" id="emailError" style="color: red; display: none;">Vui lòng nhập địa chỉ email hợp lệ</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" id="phone" placeholder="Số điện thoại" required pattern="[0-9]{10}" title="Vui lòng nhập 10 chữ số">
+                        <span class="error-message" id="phoneError" style="color: red; display: none;">Vui lòng nhập số điện thoại hợp lệ (10 chữ số)</span>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password" placeholder="Mật khẩu" required minlength="6">
+                            <span class="error-message" id="passwordError" style="color: red; display: none;">Mật khẩu phải có ít nhất 6 ký tự</span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Xác nhận mật khẩu" required>
+                            <span class="error-message" id="confirmPasswordError" style="color: red; display: none;">Mật khẩu không khớp</span>
+                        </div>
+                    </div>
+                    <div class="form-group terms-check">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a></label>
+                    </div>
+                    <button type="submit" class="theme-btn">ĐĂNG KÝ</button>
+                    <div class="register-links">
+                        Đã có tài khoản? <a href="login.html">Đăng nhập</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Register section end -->
+
+    <!-- footer section start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <img src="assets/img/logo.png" alt="giới thiệu" />
+                        <p>123 Đường Lê Lợi, Quận 1, TP. Hồ Chí Minh, Việt Nam</p>
+                        <h6><span>Gọi chúng tôi: </span>(+84) 123 456 7890</h6>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <h4>Pháp Lý</h4>
+                        <ul>
+                            <li><a href="terms.html">Điều Khoản Sử Dụng</a></li>
+                            <li><a href="privacy.html">Chính Sách Bảo Mật</a></li>
+                            <li><a href="about.html">Về chúng tôi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <h4>Tài Khoản</h4>
+                        <ul>
+                            <li><a href="#">Tài Khoản Của Tôi</a></li>
+                            <li><a href="#">Danh Sách Theo Dõi</a></li>
+                            <li><a href="#">Bộ Sưu Tập</a></li>
+                            <li><a href="#">Hướng Dẫn Sử Dụng</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <h4>Bản Tin</h4>
+                        <p>Đăng ký hệ thống bản tin của chúng tôi ngay bây giờ để nhận tin tức mới nhất.</p>
+                        <form action="sucessdk.html">
+                            <input 
+                                type="email" 
+                                placeholder="Nhập email của bạn.." 
+                                required 
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                                title="Vui lòng nhập địa chỉ email hợp lệ" 
+                            />
+                            <span class="error-message" id="footerEmailError" style="color: red; display: none;">Vui lòng nhập địa chỉ email hợp lệ</span>
+                            <button type="submit">ĐĂNG KÝ NGAY</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 text-center text-lg-left">
+                        <div class="copyright-content">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-right">
+                        <div class="copyright-content">
+                            <a href="#" class="scrollToTop">
+                                Lên đầu trang<i class="icofont icofont-arrow-up"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><!-- kết thúc phần chân trang -->
+
+    <!-- jquery main JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Slick nav JS -->
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <!-- owl carousel JS -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Popup JS -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Isotope JS -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- main JS -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Footer email validation
+        const footerEmailInput = document.querySelector('footer input[type="email"]');
+        const footerEmailError = document.getElementById('footerEmailError');
+    
+        if (footerEmailInput && footerEmailError) {
+            footerEmailInput.addEventListener('input', function() {
+                if (footerEmailInput.validity.valid) {
+                    footerEmailError.style.display = 'none';
+                } else {
+                    footerEmailError.style.display = 'block';
+                }
+            });
+        }
+        
+        // Main form validations
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
+        const phoneInput = document.getElementById('phone');
+        const phoneError = document.getElementById('phoneError');
+        const passwordInput = document.getElementById('password');
+        const passwordError = document.getElementById('passwordError');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        const confirmPasswordError = document.getElementById('confirmPasswordError');
+        
+        // Email validation
+        if (emailInput && emailError) {
+            emailInput.addEventListener('input', function() {
+                if (emailInput.validity.valid) {
+                    emailError.style.display = 'none';
+                } else {
+                    emailError.style.display = 'block';
+                }
+            });
+        }
+        
+        // Phone validation
+        if (phoneInput && phoneError) {
+            phoneInput.addEventListener('input', function() {
+                if (phoneInput.validity.valid) {
+                    phoneError.style.display = 'none';
+                } else {
+                    phoneError.style.display = 'block';
+                }
+            });
+        }
+        
+        // Password validation
+        if (passwordInput && passwordError) {
+            passwordInput.addEventListener('input', function() {
+                if (passwordInput.validity.valid) {
+                    passwordError.style.display = 'none';
+                } else {
+                    passwordError.style.display = 'block';
+                }
+            });
+        }
+        
+        // Confirm password validation
+        if (confirmPasswordInput && confirmPasswordError && passwordInput) {
+            confirmPasswordInput.addEventListener('input', function() {
+                if (confirmPasswordInput.value === passwordInput.value) {
+                    confirmPasswordError.style.display = 'none';
+                } else {
+                    confirmPasswordError.style.display = 'block';
+                }
+            });
+        }
+        
+        // Form submission validation
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            let isValid = true;
+            
+            // Check all required fields
+            const requiredFields = this.querySelectorAll('[required]');
+            for (let field of requiredFields) {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = '#eb315a';
+                } else {
+                    field.style.borderColor = '#333';
+                }
+            }
+            
+            // Check password match
+            if (passwordInput.value !== confirmPasswordInput.value) {
+                confirmPasswordError.style.display = 'block';
+                isValid = false;
+            }
+            
+            // Check email format
+            if (!emailInput.validity.valid) {
+                emailError.style.display = 'block';
+                isValid = false;
+            }
+            
+            // Check phone format
+            if (!phoneInput.validity.valid) {
+                phoneError.style.display = 'block';
+                isValid = false;
+            }
+            
+            if (!isValid) {
+                e.preventDefault();
+                alert('Vui lòng kiểm tra lại thông tin đăng ký!');
+            }
+        });
+    </script>
+</body>
+</html>

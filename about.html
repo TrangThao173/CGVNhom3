@@ -1,0 +1,730 @@
+<!DOCTYPE HTML>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CGV - About Us</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slicknav.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/icofont.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="all" />
+    <style>
+        .about-section {
+            padding: 70px 0;
+            background-color: #13151f;
+        }
+        .about-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .about-header h1 {
+            color: #eb315a;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .about-header p {
+            color: #fff;
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .team-member {
+            background-color: #1e2230;
+            border-radius: 5px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(235, 49, 90, 0.2), transparent);
+            transition: all 0.5s ease;
+        }
+        .team-member:hover::before {
+            left: 100%;
+        }
+        .member-img {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            width: 100%;
+            padding-top: 100%; /* Tạo tỷ lệ 1:1 (400x400) */
+        }
+        .member-img img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Đảm bảo ảnh không bị méo */
+            transition: transform 0.5s;
+        }
+        .team-member:hover .member-img img {
+            transform: scale(1.1);
+        }
+        .member-info h3 {
+            color: #eb315a;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .member-info p {
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        .member-social {
+            margin-top: 20px;
+        }
+        .member-social a {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 50%;
+            background-color: #eb315a;
+            color: #fff;
+            text-align: center;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        .member-social a:hover {
+            background-color: #fff;
+            color: #eb315a;
+        }
+        .page-banner {
+            background-image: url('assets/img/blog-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Hiệu ứng parallax */
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            min-height: 400px;
+        }
+        .page-banner::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .page-banner-content {
+            position: relative;
+            z-index: 1;
+        }
+        .page-banner h2 {
+            color: #fff;
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .breadcrumb {
+            background-color: transparent;
+            display: inline-flex;
+            padding: 0;
+            margin: 0;
+        }
+        .breadcrumb li {
+            color: #eb315a;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .breadcrumb li a {
+            color: #fff;
+            padding-right: 10px;
+            margin-right: 10px;
+            position: relative;
+        }
+        .breadcrumb li a::after {
+            content: '/';
+            position: absolute;
+            right: -5px;
+            top: 0;
+        }
+        .about-content {
+            padding: 40px 0;
+        }
+        .about-content h3 {
+            color: #eb315a;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .about-content p {
+            color: #fff;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        /* Vision and Mission */
+        .vision-mission {
+            padding: 50px 0;
+            border-top: 1px solid #2a2f3f;
+            margin-top: 40px;
+        }
+        .vision-mission h3 {
+            color: #eb315a;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .vision-mission p {
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        /* Development Process */
+        .development-process {
+            padding: 50px 0;
+            border-top: 1px solid #2a2f3f;
+        }
+        .development-process h3 {
+            color: #eb315a;
+            font-size: 28px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .process-item {
+            background-color: #1e2230;
+            padding: 30px;
+            border-radius: 5px;
+            text-align: center;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        .process-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .process-icon {
+            font-size: 40px;
+            color: #eb315a;
+            margin-bottom: 20px;
+        }
+        .process-item h4 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .process-item p {
+            color: #fff;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        /* Contact Team */
+        .contact-team {
+            padding: 50px 0;
+            border-top: 1px solid #2a2f3f;
+        }
+        .contact-team h3 {
+            color: #eb315a;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .contact-team p {
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .contact-team input,
+        .contact-team textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #2a2f3f;
+            border-radius: 5px;
+            background-color: #1e2230;
+            color: #fff;
+            font-size: 15px;
+        }
+        .contact-team textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        .submit-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #eb315a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #ff7687;
+        }
+        /* Animation for team members */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .team-member {
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+        }
+        .team-member:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+        .team-member:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+        .team-member:nth-child(3) {
+            animation-delay: 0.9s;
+        }
+        /* Skill bars */
+        .skill-bars {
+            margin-top: 30px;
+        }
+        .skill-bar {
+            margin-bottom: 20px;
+        }
+        .skill-bar h4 {
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .skill-bar-container {
+            width: 100%;
+            background-color: #13151f;
+            height: 10px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-percentage {
+            height: 100%;
+            background: linear-gradient(to right, #eb315a, #ff7687);
+            border-radius: 5px;
+            position: relative;
+            width: 0;
+            transition: width 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader"></div>
+    <header class="header">
+        <div class="container">
+            <div class="header-area">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/img/logo.png" alt="logo" /></a>
+                </div>
+                <div class="header-right">
+                    <form action="#">
+                        <select>
+                            <option value="Phim Đang Chiếu">Phim Đang Chiếu</option>
+                            <option value="Phim Sắp Chiếu">Phim Sắp Chiếu</option>
+                            <option value="Phim Đặc Biệt">Phim Đặc Biệt</option>
+                        </select>
+                        <input type="text"/>
+                        <button><i class="icofont icofont-search"></i></button>
+                    </form>
+                    <ul>
+                        <li><a href="login.html">Đăng nhập</a></li>
+                    </ul>
+                </div>
+                <div class="menu-area">
+                    <div class="responsive-menu"></div>
+                    <div class="mainmenu">
+                        <ul id="primary-menu">
+                            <li><a href="index.html">Trang Chủ</a></li>
+                            <li><a href="movies.html">Phim</a></li>
+
+                            <li><a href="blog.html">Tin Tức</a></li>
+                            <li><a class="active" href="about-us.html">Về Chúng Tôi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner Start -->
+    <section class="page-banner">
+        <div class="container">
+            <div class="page-banner-content">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2>Về Chúng Tôi</h2>
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li>Về Chúng Tôi</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Page Banner End -->
+
+    <!-- About Section Start -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-header">
+                <h1><i class="icofont icofont-people"></i> Nhóm Phát Triển Website CGV</h1>
+                <p>Chúng tôi là nhóm sinh viên đam mê với thiết kế web và phim ảnh. Dự án này được phát triển như một phần của khóa học Phát triển Web tại Trường Đại học Thủ Dầu Một.</p>
+            </div>
+
+            <div class="about-content">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3>Giới Thiệu Dự Án</h3>
+                        <p>Website CGV này là một dự án mẫu nhằm tạo ra một trang web đặt vé xem phim trực tuyến với đầy đủ các chức năng cơ bản. Người dùng có thể duyệt phim đang chiếu, sắp chiếu, xem thông tin chi tiết về phim và các diễn viên, đọc tin tức điện ảnh và đặt vé trực tuyến.</p>
+                        <p>Dự án được phát triển sử dụng các công nghệ web như HTML, CSS, JavaScript và jQuery. Chúng tôi cũng sử dụng Bootstrap framework để tạo giao diện responsive, thân thiện với người dùng trên mọi thiết bị.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <h4>HTML & CSS</h4>
+                                <div class="skill-bar-container">
+                                    <div class="skill-percentage" data-percent="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <h4>JavaScript</h4>
+                                <div class="skill-bar-container">
+                                    <div class="skill-percentage" data-percent="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <h4>Bootstrap</h4>
+                                <div class="skill-bar-container">
+                                    <div class="skill-percentage" data-percent="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <h4>Responsive Design</h4>
+                                <div class="skill-bar-container">
+                                    <div class="skill-percentage" data-percent="88"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vision-mission">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3>Tầm Nhìn</h3>
+                        <p>Chúng tôi hướng tới việc xây dựng một nền tảng đặt vé xem phim trực tuyến hàng đầu, mang lại trải nghiệm mượt mà và tiện lợi cho người dùng trên mọi thiết bị.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3>Sứ Mệnh</h3>
+                        <p>Đem đến một không gian giải trí trực tuyến chất lượng cao, nơi người dùng có thể dễ dàng khám phá các bộ phim mới, cập nhật tin tức điện ảnh và đặt vé chỉ với vài cú nhấp chuột.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="development-process">
+                <h3>Quy Trình Phát Triển</h3>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="process-item">
+                            <div class="process-icon">
+                                <i class="icofont icofont-light-bulb"></i>
+                            </div>
+                            <h4>Ý Tưởng</h4>
+                            <p>Chúng tôi bắt đầu bằng việc thảo luận ý tưởng, xác định các tính năng cần thiết và mục tiêu của website.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="process-item">
+                            <div class="process-icon">
+                                <i class="icofont icofont-ui-edit"></i>
+                            </div>
+                            <h4>Thiết Kế</h4>
+                            <p>Thiết kế giao diện người dùng thân thiện, tối ưu hóa trải nghiệm.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="process-item">
+                            <div class="process-icon">
+                                <i class="icofont icofont-code"></i>
+                            </div>
+                            <h4>Phát Triển</h4>
+                            <p>Viết mã nguồn, tích hợp các công nghệ và đảm bảo tính bảo mật cũng như hiệu suất của website.</p>
+                            <p><b>Bịa á chứ đâu ra</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title pb-20">
+                        <h1><i class="icofont icofont-users-alt-4"></i> Thành Viên Nhóm</h1>
+                    </div>
+                </div>
+            </div>
+            <hr />
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-member">
+                        <div class="member-img">
+                            <img src="assets/img/tai.png" alt="Thành viên 1" />
+                        </div>
+                        <div class="member-info">
+                            <h3>Quãng Tấn Tài</h3>
+                            <p><strong>MSSV:</strong> 2222104030600</p>
+                            <p><strong>Vai trò:</strong> Ngồi xem</p>
+                            <p>Chịu trách nhiệm xách nước, bổ cam.</p>
+                            <div class="member-social">
+                                <a href="#"><i class="icofont icofont-facebook"></i></a>
+                                <a href="#"><i class="icofont icofont-twitter"></i></a>
+                                <a href="#"><i class="icofont icofont-linkedin"></i></a>
+                                <a href="#"><i class="icofont icofont-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-member">
+                        <div class="member-img">
+                            <img src="assets/img/thao.jpg" alt="Thành viên 2" />
+                        </div>
+                        <div class="member-info">
+                            <h3>Lê Hoàng Trang Thảo</h3>
+                            <p><strong>MSSV:</strong> 2222104030419</p>
+                            <p><strong>Vai trò:</strong> Trưởng nhóm</p>
+                            <p>Phụ trách thiết kế giao diện người dùng, trải nghiệm người dùng.</p>
+                            <div class="member-social">
+                                <a href="#"><i class="icofont icofont-facebook"></i></a>
+                                <a href="#"><i class="icofont icofont-twitter"></i></a>
+                                <a href="#"><i class="icofont icofont-linkedin"></i></a>
+                                <a href="#"><i class="icofont icofont-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-member">
+                        <div class="member-img">
+                            <img src="assets/img/thu.jpg" alt="Thành viên 3" />
+                        </div>
+                        <div class="member-info">
+                            <h3>Lê Ngọc Thư</h3>
+                            <p><strong>MSSV:</strong> 2222104030385</p>
+                            <p><strong>Vai trò:</strong> Thành viên</p>
+                            <p>Phụ trách thiết kế giao diện người dùng, trải nghiệm người dùng.</p>
+                            <div class="member-social">
+                                <a href="#"><i class="icofont icof seldom-used"></i></a>
+                                <a href="#"><i class="icofont icofont-twitter"></i></a>
+                                <a href="#"><i class="icofont icofont-linkedin"></i></a>
+                                <a href="#"><i class="icofont icofont-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-team">
+                <h3>Liên Hệ Với Nhóm</h3>
+                <p>Có bất kỳ câu hỏi hoặc ý kiến đóng góp nào? Hãy liên hệ với chúng tôi!</p>
+                <form action="#" method="post">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="text" placeholder="Họ và Tên" required>
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="col-lg-12">
+                            <textarea placeholder="Nội dung phản hồi" required></textarea>
+                        </div>
+                        <div class="col-lg-12">
+                            <button type="submit" class="submit-btn">Gửi Phản Hồi</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <img src="assets/img/logo.png" alt="giới thiệu" />
+                        <p>123 Đường Lê Lợi, Quận 1, TP. Hồ Chí Minh, Việt Nam</p>
+                        <h6><span>Gọi chúng tôi: </span>(+84) 123 456 7890</h6>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <h4>Pháp Lý</h4>
+                        <ul>
+                            <li><a href="terms.html">Điều Khoản Sử Dụng</a></li>
+                            <li><a href="privacy.html">Chính Sách Bảo Mật</a></li>
+                            <li><a href="about.html">Về chúng tôi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <h4>Tài Khoản</h4>
+                        <ul>
+                            <li><a href="#">Tài Khoản Của Tôi</a></li>
+                            <li><a href="#">Danh Sách Theo Dõi</a></li>
+                            <li><a href="#">Bộ Sưu Tập</a></li>
+                            <li><a href="#">Hướng Dẫn Sử Dụng</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget">
+                        <h4>Bản Tin</h4>
+                        <p>Đăng ký hệ thống bản tin của chúng tôi ngay bây giờ để nhận tin tức mới nhất.</p>
+                        <form action="sucessdk.html">
+                            <input 
+                                type="email" 
+                                placeholder="Nhập email của bạn.." 
+                                required 
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                                title="Vui lòng nhập địa chỉ email hợp lệ" 
+                            />
+                            <span class="error-message" id="emailError" style="color: red; display: none;">Vui lòng nhập địa chỉ email hợp lệ</span>
+                            <button type="submit">ĐĂNG KÝ NGAY</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 text-center text-lg-left">
+                        <div class="copyright-content">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-right">
+                        <div class="copyright-content">
+                            <a href="#" class="scrollToTop">
+                                Lên đầu trang<i class="icofont icofont-arrow-up"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- jquery main JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Slick nav JS -->
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <!-- owl carousel JS -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Popup JS -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Isotope JS -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- main JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/login.js"></script>
+    <!-- Email validation and animations -->
+    <script>
+        const emailInput = document.querySelector('input[type="email"]');
+        const emailError = document.getElementById('emailError');
+    
+        emailInput.addEventListener('input', function() {
+            if (emailInput.validity.valid) {
+                emailError.style.display = 'none';
+            } else {
+                emailError.style.display = 'block';
+            }
+        });
+    
+        document.querySelector('form').addEventListener('submit', function(e) {
+            if (!emailInput.validity.valid) {
+                emailError.style.display = 'block';
+                e.preventDefault();
+            }
+        });
+
+        // Animation for skill bars
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillBars = document.querySelectorAll('.skill-percentage');
+
+            const animateSkillBars = () => {
+                skillBars.forEach(function(skillBar) {
+                    const percent = skillBar.getAttribute('data-percent');
+                    const rect = skillBar.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                        skillBar.style.width = percent + '%';
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', animateSkillBars);
+            animateSkillBars();
+        });
+
+        // Team member hover effects
+        const teamMembers = document.querySelectorAll('.team-member');
+        
+        teamMembers.forEach(function(member) {
+            member.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#252a3b';
+            });
+            
+            member.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '#1e2230';
+            });
+        });
+
+        // Scroll reveal animation
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.about-content, .vision-mission, .development-process, .contact-team');
+            
+            elements.forEach(function(element) {
+                const position = element.getBoundingClientRect();
+                
+                if(position.top < window.innerHeight && position.bottom >= 0) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

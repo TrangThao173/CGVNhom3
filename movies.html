@@ -1,0 +1,796 @@
+<!DOCTYPE HTML>
+<html lang="zxx">
+	
+<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Moviepoint - Online Movie, Video and TV Show HTML Template</title>
+		<!-- Favicon Icon -->
+		<link rel="icon" type="image/png" href="assets/img/favcion.png" />
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
+		<!-- Slick nav CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/slicknav.min.css" media="all" />
+		<!-- Iconfont CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/icofont.css" media="all" />
+		<!-- Owl carousel CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+		<!-- Popup CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+		<!-- Main style CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
+		<!-- Responsive CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="all" />
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+</head>
+<body>
+		<!-- Page loader -->
+	    <div id="preloader"></div>
+		<!-- header section start -->
+		<head>
+			<meta charset="UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>CGV</title>
+			<link rel="icon" type="image/png" href="assets/img/logo.png" />
+			<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
+			<link rel="stylesheet" type="text/css" href="assets/css/slicknav.min.css" media="all" />
+			<link rel="stylesheet" type="text/css" href="assets/css/icofont.css" media="all" />
+			<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+			<link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+			<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
+			<link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="all" />
+			<style>
+			#loginModal {
+	  display: none;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  z-index: 1000;
+	  display: flex; /* Thêm display: flex để căn giữa */
+	  justify-content: center; /* Căn giữa theo chiều ngang */
+	  align-items: center; /* Căn giữa theo chiều dọc */
+	}
+	
+	#loginModal .modal-content {
+	  background: white;
+	  padding: 20px;
+	  border-radius: 5px;
+	  position: relative;
+	  max-width: 500px;
+	  width: 90%;
+	  box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
+	}
+	
+	#loginModal .close {
+	  position: absolute;
+	  top: 10px;
+	  right: 10px;
+	  font-size: 20px;
+	  cursor: pointer;
+	}
+			</style>
+		</head>
+		<body>
+			<header class="header">
+				<div class="container">
+					<div class="header-area">
+						<div class="logo">
+							<a href="index.html"><img src="assets/img/logo.png" alt="logo" /></a>
+						</div>
+						<div class="header-right">
+							<form action="#">
+								<select>
+									<option value="Phim Đang Chiếu">Phim Đang Chiếu</option>
+									<option value="Phim Sắp Chiếu">Phim Sắp Chiếu</option>
+									<option value="Phim Đặc Biệt">Phim Đặc Biệt</option>
+								</select>
+								<input type="text"/>
+								<button><i class="icofont icofont-search"></i></button>
+							</form>
+							<ul>
+								<li><a href="login.html">Đăng nhập</a></li>
+							</ul>
+						</div>
+						<div class="menu-area">
+							<div class="responsive-menu"></div>
+							<div class="mainmenu">
+								<ul id="primary-menu">
+									<li><a href="index.html">Trang Chủ</a></li>
+									<li><a class="active" href="movies.html">Phim</a></li>
+									<li><a href="blog.html">Tin Tức</a></li>								
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+		
+		<!-- portfolio section start -->
+		 <br>
+		 <br>
+		 <br>
+		 <br>
+		<section class="portfolio-area pt-60">
+			<div class="container">
+				<div class="row flexbox-center">
+					<div class="col-lg-6 text-center text-lg-left">
+					    <div class="section-title">
+							<h1><i class="icofont icofont-movie"></i> Nổi bật tháng này</h1>
+						</div>
+					</div>
+					<div class="col-lg-6 text-center text-lg-right">
+					    <div class="portfolio-menu">
+							<ul>
+								<li data-filter="*" class="active">All</li>
+								<li data-filter=".action">Hành động</li>
+								<li data-filter=".comedy">Kinh dị</li>
+								<li data-filter=".drama">Phiêu lưu</li>
+								<li data-filter=".scifi">Tình cảm</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="row portfolio-item">	
+				<div class="col-lg-3 col-md-4 col-sm-6 action drama">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/3/5/350x495-diadao.jpg" alt="ĐỊA ĐẠO: MẶT TRỜI TRONG BÓNG TỐI" />
+							<a href="https://www.youtube.com/watch?v=-OGDDtsIBHA" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>ĐỊA ĐẠO: MẶT TRỜI TRONG BÓNG TỐI</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 comedy drama">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/3/5/350x495-redenvelope.jpg" alt="CƯỚI MA GIẢI HẠN" />
+							<a href="https://www.youtube.com/watch?v=L7KuvLShQ_Y" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>CƯỚI MA GIẢI HẠN</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 drama">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/p/o/poster_minecraft_1.jpg" alt="MỘT BỘ PHIM MINECRAFT" />
+							<a href="https://www.youtube.com/watch?v=O1f6L1Pqu28" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>MỘT BỘ PHIM MINECRAFT</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 comedy">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/p/o/poster_anak_kunti_70x100-red_20241202_1_.jpg" alt="MẸ QUỶ CON MA" />
+							<a href="https://www.youtube.com/watch?v=o9paiIRWMG0" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>MẸ QUỶ CON MA</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 action drama">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/l/o/lobby_payoff_poster_kc_18.04.2025.jpg" alt="ĐẦU XUÔI ĐUÔI ĐÚT LÓT " />
+							<a href="https://www.youtube.com/watch?v=jq3mphCGCS0" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>ĐẦU XUÔI ĐUÔI ĐÚT LÓT </h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 action">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/p/m/pm923intl_spcl_bld_1080x1312px_enguk_v1_r1.jpg" alt="DUNE: HÀNH TINH CÁT - PHẦN HAI (CHIẾU LẠI)" />
+							<a href="https://www.youtube.com/watch?v=kCO-RO3q7U4" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>DUNE: HÀNH TINH CÁT - PHẦN HAI (CHIẾU LẠI)</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 action">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/p/m/pm1067intl_excl_3d_1080x1350px_enguk_v2_r1.jpg" alt="GODZILLA X KONG: ĐẾ CHẾ MỚI (CHIẾU LẠI)" />
+							<a href="https://www.youtube.com/watch?v=RXc2bs_aBuA" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>GODZILLA X KONG: ĐẾ CHẾ MỚI (CHIẾU LẠI)</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 comedy">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/b/l/bloat-poster_1.jpg" alt="KAPPA: ÁC LINH DƯỚI ĐÁY HỒ" />
+							<a href="https://www.youtube.com/watch?v=dL8b6WgcEkY" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>KAPPA: ÁC LINH DƯỚI ĐÁY HỒ</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 action">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/p/o/poster_man_trinh_dien_cuoi_cung_4_1_.jpg" alt="OSHI NO KO: MÀN TRÌNH DIỄN CUỐI CÙNG" />
+							<a href="https://www.youtube.com/watch?v=rNjmXuIXfJs" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>OSHI NO KO: MÀN TRÌNH DIỄN CUỐI CÙNG</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 comedy">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/p/o/poster_ta_thuat_huyet_ngai_2_1_.jpg" alt="PANOR: TÀ THUẬT HUYẾT NGẢI" />
+							<a href="https://www.youtube.com/watch?v=3pciNGgdY_g" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>PANOR: TÀ THUẬT HUYẾT NGẢI</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 action drama">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/t/h/the_amateur_-_tay_nghi_p_d_-_teaser_poster_1_.jpg" alt="TAY NGHIỆP DƯ " />
+							<a href="https://www.youtube.com/watch?v=c0SG_zJarME" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>TAY NGHIỆP DƯ </h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 action scifi">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/d/r/drp_teaserposter_470x700.jpg" alt="BUỔI HẸN HÒ KINH HOÀNG " />
+							<a href="https://www.youtube.com/watch?v=cQ1eYm_XIcA" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>BUỔI HẸN HÒ KINH HOÀNG </h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 action">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/p/o/poster_2__4.jpg" alt="MẬT VỤ PHỤ HỒ" />
+							<a href="https://www.youtube.com/watch?v=LYrmg2lRjCs" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>MẬT VỤ PHỤ HỒ</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 action drama">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/3/5/350x495-extinction.jpg" alt="SIÊU NHÂN NHÍ ĐẠI NÁO RỪNG XANH" />
+							<a href="https://www.youtube.com/watch?v=sdV_dQiyG1s" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>SIÊU NHÂN NHÍ ĐẠI NÁO RỪNG XANH</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 action drama">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/i/n/interstellar-poster-up.jpg" alt="INTERSTELLAR (CHIẾU LẠI)" />
+							<a href="https://www.youtube.com/watch?v=TiM6fFuP2zU" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>INTERSTELLAR (CHIẾU LẠI)</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 action">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/p/o/poster_huy_t_n_truy_h_nh.jpg" alt="HUYẾT ÁN TRUY HÀNH" />
+							<a href="https://www.youtube.com/watch?v=ssTMJqB9pBU " class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>HUYẾT ÁN TRUY HÀNH</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 action drama">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/k/a/kayara_pay_off_poster_kc_04.04.2025.jpg" alt="KAYARA: CÔ BÉ CHIẾN BINH" />
+							<a href="https://www.youtube.com/watch?v=9MFHYvdtrRw" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>KAYARA: CÔ BÉ CHIẾN BINH</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 action scifi">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/4/7/470x700-muaythai.jpg" alt="GẤU YÊU CỦA ANH" />
+							<a href="https://www.youtube.com/watch?v=VQOOUxTah0w" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>GẤU YÊU CỦA ANH</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 comedy">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/3/5/350x495-adl_1__1.jpg" alt="ÂM DƯƠNG LỘ" />
+							<a href="https://www.youtube.com/watch?v=FsR_KBK5Py8" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>ÂM DƯƠNG LỘ</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-4 col-sm-6 action drama">
+					<div class="single-portfolio">
+						<div class="single-portfolio-img">
+							<img src="https://iguov8nhvyobj.vcdn.cloud/media/catalog/product/cache/1/thumbnail/240x388/c88460ec71d04fa96e628a21494d2fd3/d/i/digitalkv.jpg" alt="LẠC TRÔI" />
+							<a href="https://www.youtube.com/watch?v=B3V-9tiuQTo" class="popup-youtube">
+								<i class="icofont icofont-ui-play"></i>
+							</a>
+						</div>
+						<div class="portfolio-content">
+							<h2>LẠC TRÔI</h2>
+							<div class="review">
+								<div class="author-review">
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+									<i class="icofont icofont-star"></i>
+								</div>
+								<h4>180k Đánh giá</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</section><!-- portfolio section end -->
+		<!-- video section start -->
+		<section class="video ptb-90">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+					    <div class="section-title pb-20">
+							<h1><i class="icofont icofont-film"></i>Comming Soon</h1>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="row">
+                    <div class="col-md-12">
+						<div class="video-slider mt-20">
+							<div class="video-area">
+								<img src="assets/img/video/video2.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+							<div class="video-area">
+								<img src="assets/img/video/video3.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+							<div class="video-area">
+								<img src="assets/img/video/video4.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+							<div class="video-area">
+								<img src="assets/img/video/video5.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+							<div class="video-area">
+								<img src="assets/img/video/video2.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+							<div class="video-area">
+								<img src="assets/img/video/video3.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+							<div class="video-area">
+								<img src="assets/img/video/video4.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+							<div class="video-area">
+								<img src="assets/img/video/video5.png" alt="video" />
+								<a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
+									<i class="icofont icofont-ui-play"></i>
+								</a>
+							</div>
+						</div>
+                    </div>
+				</div>
+			</div>
+		</section><!-- video section end -->
+		<!-- footer section start -->
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-sm-6">
+						<div class="widget">
+							<img src="assets/img/logo.png" alt="giới thiệu" />
+							<p>123 Đường Lê Lợi, Quận 1, TP. Hồ Chí Minh, Việt Nam</p>
+							<h6><span>Gọi chúng tôi: </span>(+84) 123 456 7890</h6>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="widget">
+							<h4>Pháp Lý</h4>
+							<ul>
+								<li><a href="terms.html">Điều Khoản Sử Dụng</a></li>
+								<li><a href="privacy.html">Chính Sách Bảo Mật</a></li>
+								<li><a href="about.html">Về chúng tôi</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="widget">
+							<h4>Tài Khoản</h4>
+							<ul>
+								<li><a href="#">Tài Khoản Của Tôi</a></li>
+								<li><a href="#">Danh Sách Theo Dõi</a></li>
+								<li><a href="#">Bộ Sưu Tập</a></li>
+								<li><a href="#">Hướng Dẫn Sử Dụng</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6">
+						<div class="widget">
+							<h4>Bản Tin</h4>
+							<p>Đăng ký hệ thống bản tin của chúng tôi ngay bây giờ để nhận tin tức mới nhất.</p>
+							<form action="sucessdk.html">
+								<input 
+									type="email" 
+									placeholder="Nhập email của bạn.." 
+									required 
+									pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+									title="Vui lòng nhập địa chỉ email hợp lệ" 
+								/>
+								<span class="error-message" id="emailError" style="color: red; display: none;">Vui lòng nhập địa chỉ email hợp lệ</span>
+								<button type="submit">ĐĂNG KÝ NGAY</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<hr />
+			</div>
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 text-center text-lg-left">
+							<div class="copyright-content">
+							</div>
+						</div>
+						<div class="col-lg-6 text-center text-lg-right">
+							<div class="copyright-content">
+								<a href="#" class="scrollToTop">
+									Lên đầu trang<i class="icofont icofont-arrow-up"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer><!-- kết thúc phần chân trang -->
+		<!-- jquery main JS -->
+		<script src="assets/js/jquery.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="assets/js/bootstrap.min.js"></script>
+		<!-- Slick nav JS -->
+		<script src="assets/js/jquery.slicknav.min.js"></script>
+		<!-- owl carousel JS -->
+		<script src="assets/js/owl.carousel.min.js"></script>
+		<!-- Popup JS -->
+		<script src="assets/js/jquery.magnific-popup.min.js"></script>
+		<!-- Isotope JS -->
+		<script src="assets/js/isotope.pkgd.min.js"></script>
+		<!-- main JS -->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/login.js"></script>
+	</body>
+	<script>
+		const emailInput = document.querySelector('input[type="email"]');
+		const emailError = document.getElementById('emailError');
+	
+		emailInput.addEventListener('input', function() {
+			if (emailInput.validity.valid) {
+				emailError.style.display = 'none';
+			} else {
+				emailError.style.display = 'block';
+			}
+		});
+	
+		document.querySelector('form').addEventListener('submit', function(e) {
+			if (!emailInput.validity.valid) {
+				emailError.style.display = 'block';
+				e.preventDefault();
+			}
+		});
+	</script>
+</html>
